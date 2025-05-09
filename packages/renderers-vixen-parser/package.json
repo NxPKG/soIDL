@@ -1,0 +1,65 @@
+{
+    "name": "@soidl/renderers-vixen-parser",
+    "version": "1.0.13",
+    "description": "Renders Yellowstone Account and Instruction Parsers",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "node": {
+            "import": "./dist/index.node.mjs",
+            "require": "./dist/index.node.cjs"
+        }
+    },
+    "main": "./dist/index.node.cjs",
+    "module": "./dist/index.node.mjs",
+    "types": "./dist/types/index.d.ts",
+    "type": "commonjs",
+    "files": [
+        "./dist/templates",
+        "./dist/types",
+        "./dist/index.*"
+    ],
+    "sideEffects": false,
+    "keywords": [
+        "solana",
+        "framework",
+        "standard",
+        "renderers",
+        "Yellowstone",
+        "vixen",
+        "parser"
+    ],
+    "scripts": {
+        "build": "rimraf dist && pnpm build:src && pnpm build:types",
+        "build:src": "zx ../../node_modules/@soidl/internals/scripts/build-src.mjs node",
+        "build:types": "zx ../../node_modules/@soidl/internals/scripts/build-types.mjs",
+        "dev": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node --watch",
+        "lint": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs",
+        "lint:fix": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs --fix",
+        "test": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node",
+        "test:e2e": "./e2e/test.sh"
+    },
+    "dependencies": {
+        "@soidl/errors": "workspace:*",
+        "@soidl/nodes": "workspace:*",
+        "@soidl/renderers-core": "workspace:*",
+        "@soidl/visitors-core": "workspace:*",
+        "@solana/codecs-strings": "rc",
+        "nunjucks": "^3.2.4"
+    },
+    "devDependencies": {
+        "@types/nunjucks": "^3.2.6",
+        "@soidl/nodes-from-anchor": "workspace:*"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/soidl-idl/soidl"
+    },
+    "bugs": {
+        "url": "http://github.com/soidl-idl/soidl/issues"
+    },
+    "browserslist": [
+        "supports bigint and not dead",
+        "maintained node versions"
+    ]
+}

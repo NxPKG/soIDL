@@ -1,0 +1,5 @@
+{
+    "idl": "mock-idl.json",
+    "before": ["@soidl/visitors#identityVisitor"],
+    "scripts": {}
+}

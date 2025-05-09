@@ -1,0 +1,67 @@
+{
+    "name": "@soidl/cli",
+    "version": "1.0.12",
+    "description": "The package that provides a CLI for the Soidl standard",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "node": {
+            "import": "./dist/index.node.mjs",
+            "require": "./dist/index.node.cjs"
+        }
+    },
+    "main": "./dist/index.node.cjs",
+    "module": "./dist/index.node.mjs",
+    "types": "./dist/types/index.d.ts",
+    "type": "commonjs",
+    "files": [
+        "./dist/types",
+        "./dist/index.*"
+    ],
+    "sideEffects": false,
+    "keywords": [
+        "soidl",
+        "standard",
+        "cli"
+    ],
+    "scripts": {
+        "build": "rimraf dist && pnpm build:src && pnpm build:types",
+        "build:src": "zx ../../node_modules/@soidl/internals/scripts/build-src.mjs node",
+        "build:types": "zx ../../node_modules/@soidl/internals/scripts/build-types.mjs",
+        "dev": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node --watch",
+        "lint": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs",
+        "lint:fix": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs --fix",
+        "test": "pnpm test:types && pnpm test:treeshakability && pnpm test:node && pnpm test:exports",
+        "test:exports": "node test/exports/module.mjs && node test/exports/commonjs.cjs",
+        "test:node": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node",
+        "test:treeshakability": "zx ../../node_modules/@soidl/internals/scripts/test-treeshakability.mjs",
+        "test:types": "zx ../../node_modules/@soidl/internals/scripts/test-types.mjs"
+    },
+    "dependencies": {
+        "@soidl/nodes": "workspace:*",
+        "@soidl/nodes-from-anchor": "workspace:*",
+        "@soidl/renderers": "workspace:*",
+        "@soidl/renderers-js": "workspace:*",
+        "@soidl/renderers-js-umi": "workspace:*",
+        "@soidl/renderers-rust": "workspace:*",
+        "@soidl/visitors": "workspace:*",
+        "@soidl/visitors-core": "workspace:*",
+        "commander": "^13.1.0",
+        "picocolors": "^1.1.1",
+        "prompts": "^2.4.2"
+    },
+    "devDependencies": {
+        "@types/prompts": "^2.4.9"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/soidl-idl/soidl"
+    },
+    "bugs": {
+        "url": "http://github.com/soidl-idl/soidl/issues"
+    },
+    "browserslist": [
+        "supports bigint and not dead",
+        "maintained node versions"
+    ]
+}

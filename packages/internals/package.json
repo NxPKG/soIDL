@@ -1,0 +1,15 @@
+{
+    "name": "@soidl/internals",
+    "version": "0.0.0",
+    "private": true,
+    "files": [
+        "scripts",
+        "env-shim.ts",
+        "tsconfig.*",
+        "tsup.config.*",
+        "vitest.config.*"
+    ],
+    "devDependencies": {
+        "browserslist-to-esbuild": "^2.1.1"
+    }
+}

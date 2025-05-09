@@ -1,0 +1,68 @@
+{
+    "name": "@soidl/renderers-rust",
+    "version": "1.0.21",
+    "description": "Renders Rust clients for your programs",
+    "exports": {
+        "types": "./dist/types/index.d.ts",
+        "node": {
+            "import": "./dist/index.node.mjs",
+            "require": "./dist/index.node.cjs"
+        }
+    },
+    "main": "./dist/index.node.cjs",
+    "module": "./dist/index.node.mjs",
+    "types": "./dist/types/index.d.ts",
+    "type": "commonjs",
+    "files": [
+        "./dist/templates",
+        "./dist/types",
+        "./dist/index.*"
+    ],
+    "sideEffects": false,
+    "keywords": [
+        "solana",
+        "framework",
+        "standard",
+        "renderers",
+        "rust",
+        "client"
+    ],
+    "scripts": {
+        "build": "rimraf dist && pnpm build:src && pnpm build:types",
+        "build:src": "zx ../../node_modules/@soidl/internals/scripts/build-src.mjs node",
+        "build:types": "zx ../../node_modules/@soidl/internals/scripts/build-types.mjs",
+        "dev": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node --watch",
+        "lint": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs",
+        "lint:fix": "zx ../../node_modules/@soidl/internals/scripts/lint.mjs --fix",
+        "test": "pnpm test:types && pnpm test:treeshakability && pnpm test:node && pnpm test:e2e && pnpm test:exports",
+        "test:e2e": "./e2e/test.sh",
+        "test:exports": "node ./test/exports/module.mjs && node ./test/exports/commonjs.cjs",
+        "test:node": "zx ../../node_modules/@soidl/internals/scripts/test-unit.mjs node",
+        "test:treeshakability": "zx ../../node_modules/@soidl/internals/scripts/test-treeshakability.mjs",
+        "test:types": "zx ../../node_modules/@soidl/internals/scripts/test-types.mjs"
+    },
+    "dependencies": {
+        "@soidl/errors": "workspace:*",
+        "@soidl/nodes": "workspace:*",
+        "@soidl/renderers-core": "workspace:*",
+        "@soidl/visitors-core": "workspace:*",
+        "@solana/codecs-strings": "rc",
+        "nunjucks": "^3.2.4"
+    },
+    "devDependencies": {
+        "@types/nunjucks": "^3.2.6",
+        "@soidl/nodes-from-anchor": "workspace:*"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/soidl-idl/soidl"
+    },
+    "bugs": {
+        "url": "http://github.com/soidl-idl/soidl/issues"
+    },
+    "browserslist": [
+        "supports bigint and not dead",
+        "maintained node versions"
+    ]
+}

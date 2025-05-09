@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "module": "ESNext"
+    },
+    "display": "soidl",
+    "extends": "../internals/tsconfig.base.json",
+    "include": ["src", "test"]
+}

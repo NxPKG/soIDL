@@ -1,0 +1,27 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "soidl-idl/soidl" }
+  ],
+  "commit": false,
+  "fixed": [
+        [
+            "soidl",
+            "@soidl/errors",
+            "@soidl/node-types",
+            "@soidl/nodes",
+            "@soidl/validators",
+            "@soidl/visitors*"
+        ]
+    ],
+  "linked": [],
+  "ignore": ["@soidl/internals"],
+  "access": "public",
+  "baseBranch": "main",
+  "privatePackages": {
+        "version": false,
+        "tag": false
+  },
+  "updateInternalDependencies": "patch"
+}
