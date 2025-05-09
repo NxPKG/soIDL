@@ -409,9 +409,9 @@ checksum = "325918d6fe32f23b19878fe4b34794ae41fc19ddbe53b10571a4874d44ffd39b"
 
 [[package]]
 name = "cc"
-version = "1.2.5"
+version = "1.2.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c31a0499c1dc64f458ad13872de75c0eb7e3fdb0e67964610c914b034fc5956e"
+checksum = "8691782945451c1c383942c4874dbe63814f61cb57ef773cda2972682b7bb3c0"
 dependencies = [
  "shlex",
 ]
@@ -468,108 +468,6 @@ name = "clap_lex"
 version = "0.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
-
-[[package]]
-name = "soidl-renderers-rust-e2e-anchor"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "kaigan",
- "num-derive 0.3.3",
- "num-traits",
- "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "soidl-renderers-rust-e2e-memo"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "kaigan",
- "num-derive 0.3.3",
- "num-traits",
- "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "soidl-renderers-rust-e2e-meteora"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "kaigan",
- "num-derive 0.3.3",
- "num-traits",
- "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "soidl-renderers-rust-e2e-system"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "num-derive 0.3.3",
- "num-traits",
- "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "soidl-renderers-vixen-parser-e2e-anchor"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "soidl-renderers-rust-e2e-anchor",
- "solana-program",
- "yellowstone-vixen-core",
-]
-
-[[package]]
-name = "soidl-renderers-vixen-parser-e2e-memo"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "soidl-renderers-rust-e2e-memo",
- "solana-program",
- "yellowstone-vixen-core",
-]
-
-[[package]]
-name = "soidl-renderers-vixen-parser-e2e-meteora"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "soidl-renderers-rust-e2e-meteora",
- "solana-program",
- "yellowstone-vixen-core",
-]
-
-[[package]]
-name = "soidl-renderers-vixen-parser-e2e-system"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "soidl-renderers-rust-e2e-system",
- "solana-program",
- "yellowstone-vixen-core",
-]
-
-[[package]]
-name = "soidl-vixen-parser-test"
-version = "0.1.0"
-dependencies = [
- "clap",
- "soidl-renderers-vixen-parser-e2e-anchor",
- "soidl-renderers-vixen-parser-e2e-memo",
- "soidl-renderers-vixen-parser-e2e-meteora",
- "soidl-renderers-vixen-parser-e2e-system",
- "toml 0.8.19",
- "tracing",
- "tracing-subscriber",
- "yellowstone-vixen",
-]
 
 [[package]]
 name = "colorchoice"
@@ -643,9 +541,9 @@ dependencies = [
 
 [[package]]
 name = "crossbeam-channel"
-version = "0.5.14"
+version = "0.5.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "06ba6d68e24814cb8de6bb986db8222d3a027d15872cabc0d18817bc3c0e4471"
+checksum = "82b8f8f868b36967f9606790d1903570de9ceaf870a7bf9fbbd3016d636a2cb2"
 dependencies = [
  "crossbeam-utils",
 ]
@@ -1804,15 +1702,14 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
 name = "ring"
-version = "0.17.8"
+version = "0.17.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c17fa4cb658e3583423e915b9f3acc01cceaee1860e33d59ebae66adc3a2dc0d"
+checksum = "a4689e6c2294d81e88dc6261c768b63bc4fcdb852be6d1352498b114f61383b7"
 dependencies = [
  "cc",
  "cfg-if",
  "getrandom 0.2.15",
  "libc",
- "spin",
  "untrusted",
  "windows-sys 0.52.0",
 ]
@@ -2067,6 +1964,108 @@ checksum = "c970269d99b64e60ec3bd6ad27270092a5394c4e309314b18ae3fe575695fbe8"
 dependencies = [
  "libc",
  "windows-sys 0.52.0",
+]
+
+[[package]]
+name = "soidl-renderers-rust-e2e-anchor"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "kaigan",
+ "num-derive 0.3.3",
+ "num-traits",
+ "solana-program",
+ "thiserror",
+]
+
+[[package]]
+name = "soidl-renderers-rust-e2e-memo"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "kaigan",
+ "num-derive 0.3.3",
+ "num-traits",
+ "solana-program",
+ "thiserror",
+]
+
+[[package]]
+name = "soidl-renderers-rust-e2e-meteora"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "kaigan",
+ "num-derive 0.3.3",
+ "num-traits",
+ "solana-program",
+ "thiserror",
+]
+
+[[package]]
+name = "soidl-renderers-rust-e2e-system"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "num-derive 0.3.3",
+ "num-traits",
+ "solana-program",
+ "thiserror",
+]
+
+[[package]]
+name = "soidl-renderers-vixen-parser-e2e-anchor"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "soidl-renderers-rust-e2e-anchor",
+ "solana-program",
+ "yellowstone-vixen-core",
+]
+
+[[package]]
+name = "soidl-renderers-vixen-parser-e2e-memo"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "soidl-renderers-rust-e2e-memo",
+ "solana-program",
+ "yellowstone-vixen-core",
+]
+
+[[package]]
+name = "soidl-renderers-vixen-parser-e2e-meteora"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "soidl-renderers-rust-e2e-meteora",
+ "solana-program",
+ "yellowstone-vixen-core",
+]
+
+[[package]]
+name = "soidl-renderers-vixen-parser-e2e-system"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "soidl-renderers-rust-e2e-system",
+ "solana-program",
+ "yellowstone-vixen-core",
+]
+
+[[package]]
+name = "soidl-vixen-parser-test"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "soidl-renderers-vixen-parser-e2e-anchor",
+ "soidl-renderers-vixen-parser-e2e-memo",
+ "soidl-renderers-vixen-parser-e2e-meteora",
+ "soidl-renderers-vixen-parser-e2e-system",
+ "toml 0.8.19",
+ "tracing",
+ "tracing-subscriber",
+ "yellowstone-vixen",
 ]
 
 [[package]]
@@ -2526,12 +2525,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "spin"
-version = "0.9.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6980e8d7511241f8acf4aebddbb1ff938df5eebe98691418c4468d0b72a96a67"
-
-[[package]]
 name = "strsim"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2641,9 +2634,9 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
 name = "tokio"
-version = "1.42.0"
+version = "1.45.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5cec9b21b0450273377fc97bd4c33a8acffc8c996c987a7c5b319a0083707551"
+checksum = "2513ca694ef9ede0fb23fe71a4ee4107cb102b9dc1930f6d0fd77aae068ae165"
 dependencies = [
  "backtrace",
  "bytes",
@@ -2658,9 +2651,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-macros"
-version = "2.4.0"
+version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "693d596312e88961bc67d7f1f97af8a70227d9f90c31bba5806eec004978d752"
+checksum = "6e06d43f1345a3bcd39f6a56dbb7dcab2ba47e68e8ac134855e7e2bdbaf8cab8"
 dependencies = [
  "proc-macro2",
  "quote",
