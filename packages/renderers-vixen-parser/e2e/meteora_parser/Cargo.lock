@@ -19,14 +19,13 @@ checksum = "512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627"
 
 [[package]]
 name = "ahash"
-version = "0.8.11"
+version = "0.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e89da841a80418a9b391ebaea17f5c112ffaaa96f621d2c285b5174da76b9011"
+checksum = "891477e0c6a8957309ee5c45a6368af3ae14bb510732d2684ffa19af310920f9"
 dependencies = [
- "cfg-if",
+ "getrandom 0.2.15",
  "once_cell",
  "version_check",
- "zerocopy",
 ]
 
 [[package]]
@@ -238,7 +237,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "115e54d64eb62cdebad391c19efc9dce4981c690c85a33a12199d99bb9546fee"
 dependencies = [
  "borsh-derive 0.10.4",
- "hashbrown 0.13.2",
+ "hashbrown 0.12.3",
 ]
 
 [[package]]
@@ -373,28 +372,6 @@ name = "cfg_aliases"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
-
-[[package]]
-name = "soidl-renderers-rust-e2e-meteora"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "kaigan",
- "num-derive 0.3.3",
- "num-traits",
- "solana-program",
- "thiserror",
-]
-
-[[package]]
-name = "soidl-renderers-vixen-parser-e2e-meteora"
-version = "0.0.0"
-dependencies = [
- "borsh 0.10.4",
- "soidl-renderers-rust-e2e-meteora",
- "solana-program",
- "yellowstone-vixen-core",
-]
 
 [[package]]
 name = "console_error_panic_hook"
@@ -665,12 +642,6 @@ name = "hashbrown"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
-
-[[package]]
-name = "hashbrown"
-version = "0.13.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "43a3c133739dddd0d2990f9a4bdf8eb4b21ef50e4851ca85ab661199821d510e"
 dependencies = [
  "ahash",
 ]
@@ -1490,6 +1461,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "soidl-renderers-rust-e2e-meteora"
+version = "0.0.0"
+dependencies = [
+ "borsh 0.10.4",
+ "kaigan",
+ "num-derive 0.3.3",
+ "num-traits",
+ "solana-program",
+ "thiserror",
+]
+
+[[package]]
+name = "soidl-renderers-vixen-parser-e2e-meteora"
+version = "0.0.0"
+dependencies = [
+ "borsh 1.5.3",
+ "soidl-renderers-rust-e2e-meteora",
+ "solana-program",
+ "yellowstone-vixen-core",
+]
+
+[[package]]
 name = "solana-account-info"
 version = "2.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2030,9 +2023,9 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
 name = "tokio"
-version = "1.43.0"
+version = "1.45.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d61fa4ffa3de412bfea335c6ecff681de2b609ba3c77ef3e00e521813a9ed9e"
+checksum = "2513ca694ef9ede0fb23fe71a4ee4107cb102b9dc1930f6d0fd77aae068ae165"
 dependencies = [
  "backtrace",
  "bytes",
